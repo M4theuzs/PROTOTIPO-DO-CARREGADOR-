@@ -1,12 +1,12 @@
 # PROTOTIPO-DO-CARREGADOR-
 
-# ⚡ Protótipo de Fonte de Alimentação Linear Regulada (12V)
+#  Protótipo de Fonte de Alimentação Linear Regulada (12V)
 
 ![GitHub License](https://img.shields.io/badge/license-MIT-blue)
 ![Status](https://img.shields.io/badge/Status-Finalizado-brightgreen)
 ![Hardware](https://img.shields.io/badge/Hardware-PCB%20Design-red)
 
-## 📝 Apresentação do Projeto
+##  Apresentação do Projeto
 Este projeto consiste no desenvolvimento completo de uma **Fonte de Alimentação Linear de 12VDC**. O objetivo principal é converter a tensão alternada (AC) proveniente de um transformador em uma tensão contínua (DC) estável e livre de ruídos, capaz de alimentar circuitos eletrônicos sensíveis, como microcontroladores e sistemas embarcados.
 
 O projeto abrange desde o diagrama esquemático até o design da placa de circuito impresso (PCB) e a visualização tridimensional.
@@ -25,25 +25,25 @@ O circuito é dividido em quatro estágios fundamentais:
 
 ---
 
-## 📐 Documentação Visual e Design
+##  Documentação Visual e Design
 
-### 🖼️ Diagrama Esquemático
+### Diagrama Esquemático
 O esquemático foi projetado para garantir clareza na análise do fluxo de corrente, com conexões otimizadas entre os estágios de potência e sinal.
 ![Esquemático](PROJETO%20SIMPLES.jfif)
 
-### 🛣️ Layout da PCB e Roteamento
+###  Layout da PCB e Roteamento
 A placa foi desenvolvida em **Face Simples (Bottom Layer)** com dimensões de **80mm x 40mm**. 
 - **Largura das Trilhas:** Dimensionadas para suportar a corrente nominal do regulador sem aquecimento excessivo.
 - **Isolamento:** Espaçamento adequado entre trilhas para evitar arcos elétricos e interferências.
 ![Layout PCB](PROJETO%20FUNDO%20PRETO.jfif)
 
-### 🧱 Modelagem 3D
+###  Modelagem 3D
 A visualização 3D permite validar o posicionamento físico dos componentes, garantindo que não haja interferências mecânicas e que o regulador **7812** tenha espaço para dissipação térmica.
 ![Projeto 3D](PROJETO%203D.jfif)
 
 ---
 
-## 📦 Lista de Dispositivos (Bill of Materials)
+##  Lista de Dispositivos (Bill of Materials)
 A seleção dos componentes foi feita com base na disponibilidade comercial e eficiência técnica:
 
 ![Lista de Componentes](IMAGEM%20DO%20QUE%20TENHO.jfif)
@@ -61,5 +61,5 @@ A seleção dos componentes foi feita com base na disponibilidade comercial e ef
 | **J2** | Bloco Terminal | SIL-100-02 | Saída de tensão regulada 12VDC |
 
 
-## 👨‍💻 Autor
+##  Autor
 **Matheus Henrique Albert** *Estudante de Eletrônica / Desenvolvedor de Hardware*
