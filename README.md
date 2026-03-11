@@ -2,10 +2,6 @@
 
 #  Protótipo de Fonte de Alimentação Linear Regulada (12V)
 
-![GitHub License](https://img.shields.io/badge/license-MIT-blue)
-![Status](https://img.shields.io/badge/Status-Finalizado-brightgreen)
-![Hardware](https://img.shields.io/badge/Hardware-PCB%20Design-red)
-
 ##  Apresentação do Projeto
 Este projeto consiste no desenvolvimento completo de uma **Fonte de Alimentação Linear de 12VDC**. O objetivo principal é converter a tensão alternada (AC) proveniente de um transformador em uma tensão contínua (DC) estável e livre de ruídos, capaz de alimentar circuitos eletrônicos sensíveis, como microcontroladores e sistemas embarcados.
 
@@ -13,7 +9,7 @@ O projeto abrange desde o diagrama esquemático até o design da placa de circui
 
 ---
 
-## 🛠️ Descrição Técnica do Circuito
+## Descrição Técnica do Circuito
 
 O circuito é dividido em quatro estágios fundamentais:
 
