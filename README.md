@@ -39,7 +39,7 @@ A visualização 3D permite validar o posicionamento físico dos componentes, ga
 
 ---
 
-##  Lista de Dispositivos (Bill of Materials)
+##  Lista de Dispositivos 
 A seleção dos componentes foi feita com base na disponibilidade comercial e eficiência técnica:
 
 ![Lista de Componentes](IMAGEM%20DO%20QUE%20TENHO.jfif)
