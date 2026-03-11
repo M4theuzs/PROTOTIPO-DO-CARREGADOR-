@@ -60,15 +60,6 @@ A seleção dos componentes foi feita com base na disponibilidade comercial e ef
 | **D1** | LED | 5mm (Blue) | Sinalização de funcionamento |
 | **J2** | Bloco Terminal | SIL-100-02 | Saída de tensão regulada 12VDC |
 
----
-
-## 🚀 Como Replicar este Projeto
-1. Realize a simulação no **Proteus** para validar as formas de onda.
-2. Imprima o layout em papel fotográfico para transferência térmica ou use método fotográfico.
-3. Após a corrosão da placa, solde primeiro os componentes menores (resistores, capacitores cerâmicos) e por fim os maiores (capacitores eletrolíticos e regulador).
-4. **Teste:** Antes de conectar uma carga, utilize um multímetro na saída **J2** para confirmar os **12V**.
-
----
 
 ## 👨‍💻 Autor
 **Matheus Henrique Albert** *Estudante de Eletrônica / Desenvolvedor de Hardware*
