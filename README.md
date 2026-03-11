@@ -1,45 +1,74 @@
 # PROTOTIPO-DO-CARREGADOR-
 
-# ⚡ Protótipo de Fonte Regulada 12V (Carregador)
+# ⚡ Protótipo de Fonte de Alimentação Linear Regulada (12V)
 
-## 📝 Descrição
-Este projeto apresenta o desenvolvimento de um protótipo de fonte de alimentação utilizando uma ponte retificadora e o regulador de tensão **7812**. O circuito converte tensão alternada (AC) para corrente contínua (DC) regulada em **12V**.
+![GitHub License](https://img.shields.io/badge/license-MIT-blue)
+![Status](https://img.shields.io/badge/Status-Finalizado-brightgreen)
+![Hardware](https://img.shields.io/badge/Hardware-PCB%20Design-red)
+
+## 📝 Apresentação do Projeto
+Este projeto consiste no desenvolvimento completo de uma **Fonte de Alimentação Linear de 12VDC**. O objetivo principal é converter a tensão alternada (AC) proveniente de um transformador em uma tensão contínua (DC) estável e livre de ruídos, capaz de alimentar circuitos eletrônicos sensíveis, como microcontroladores e sistemas embarcados.
+
+O projeto abrange desde o diagrama esquemático até o design da placa de circuito impresso (PCB) e a visualização tridimensional.
 
 ---
 
-## 📐 Documentação Visual
+## 🛠️ Descrição Técnica do Circuito
 
-### Esquemático do Circuito
-O design foca na estabilidade da tensão e filtragem de ruídos.
+O circuito é dividido em quatro estágios fundamentais:
+
+1. **Estágio de Retificação (BR1):** Utiliza uma ponte de diodos (Full Wave Bridge Rectifier) para converter a senóide de entrada AC em uma forma de onda DC pulsante, aproveitando ambos os semiciclos da rede.
+2. **Estágio de Filtragem (C1):** O capacitor eletrolítico de **1000µF** atua como filtro capacitivo. Ele armazena carga durante os picos de tensão e a libera nos vales, reduzindo o *ripple* (ondulação) e entregando uma tensão mais linear ao regulador.
+3. **Estágio de Regulação (U1 - LM7812):** O circuito integrado 7812 recebe a tensão filtrada e a mantém fixada em **12V**, independente de variações na carga ou na entrada (desde que respeitado o dropout voltage de aproximadamente 2V).
+4. **Estágio de Estabilização e Proteção (C2, C3, D1):** - Os capacitores cerâmicos de **100nF** filtram ruídos de alta frequência.
+   - O LED **D1** associado ao resistor **R1 (100Ω)** fornece um feedback visual imediato de que a saída está energizada.
+
+---
+
+## 📐 Documentação Visual e Design
+
+### 🖼️ Diagrama Esquemático
+O esquemático foi projetado para garantir clareza na análise do fluxo de corrente, com conexões otimizadas entre os estágios de potência e sinal.
 ![Esquemático](PROJETO%20SIMPLES.jfif)
 
-### Layout da PCB (Trilhas)
-Design otimizado para placa de face simples (80mm x 40mm).
+### 🛣️ Layout da PCB e Roteamento
+A placa foi desenvolvida em **Face Simples (Bottom Layer)** com dimensões de **80mm x 40mm**. 
+- **Largura das Trilhas:** Dimensionadas para suportar a corrente nominal do regulador sem aquecimento excessivo.
+- **Isolamento:** Espaçamento adequado entre trilhas para evitar arcos elétricos e interferências.
 ![Layout PCB](PROJETO%20FUNDO%20PRETO.jfif)
 
-### Visualização 3D do Projeto
-Representação final dos componentes montados na placa.
+### 🧱 Modelagem 3D
+A visualização 3D permite validar o posicionamento físico dos componentes, garantindo que não haja interferências mecânicas e que o regulador **7812** tenha espaço para dissipação térmica.
 ![Projeto 3D](PROJETO%203D.jfif)
 
 ---
 
-## 📦 Lista de Componentes Utilizados
-Conforme detalhado na lista de dispositivos do projeto:
+## 📦 Lista de Dispositivos (Bill of Materials)
+A seleção dos componentes foi feita com base na disponibilidade comercial e eficiência técnica:
 
-![Lista de Dispositivos](IMAGEM%20DO%20QUE%20TENHO.jfif)
+![Lista de Componentes](IMAGEM%20DO%20QUE%20TENHO.jfif)
 
-| Referência | Componente | Função |
-| :--- | :--- | :--- |
-| **J1** | Conector SIL-2 | Entrada AC (Transformador) |
-| **BR1** | Ponte Retificadora | Retificação de onda completa |
-| **C1** | Capacitor 1000uF | Filtragem de Ripple (Eletrolítico) |
-| **C2 / C3** | Capacitores 100nF | Estabilização e Desacoplamento |
-| **U1** | Regulador 7812 | Saída estável de 12V DC |
-| **R1** | Resistor 100R | Limitador de corrente do LED |
-| **D1** | LED | Indicador visual de Power ON |
-| **J2** | Conector SIL-2 | Saída final da fonte |
+| Ref. | Componente | Especificação | Função Técnica |
+| :--- | :--- | :--- | :--- |
+| **J1** | Bloco Terminal | SIL-100-02 | Entrada de tensão AC (Secundário do Trafo) |
+| **BR1** | Ponte Retificadora | BRIDGE | Retificação em onda completa |
+| **C1** | Cap. Eletrolítico | 1000µF / 25V+ | Filtragem de ripple (baixa frequência) |
+| **C2** | Cap. Cerâmico | 100nF | Desacoplamento de entrada do regulador |
+| **U1** | Regulador Linear | LM7812 (TO-220) | Regulação ativa de tensão para 12V |
+| **C3** | Cap. Cerâmico | 100nF | Estabilização de saída e transientes |
+| **R1** | Resistor | 100Ω (1/4W) | Limitador de corrente para o LED indicador |
+| **D1** | LED | 5mm (Blue) | Sinalização de funcionamento |
+| **J2** | Bloco Terminal | SIL-100-02 | Saída de tensão regulada 12VDC |
+
+---
+
+## 🚀 Como Replicar este Projeto
+1. Realize a simulação no **Proteus** para validar as formas de onda.
+2. Imprima o layout em papel fotográfico para transferência térmica ou use método fotográfico.
+3. Após a corrosão da placa, solde primeiro os componentes menores (resistores, capacitores cerâmicos) e por fim os maiores (capacitores eletrolíticos e regulador).
+4. **Teste:** Antes de conectar uma carga, utilize um multímetro na saída **J2** para confirmar os **12V**.
 
 ---
 
 ## 👨‍💻 Autor
-Projeto desenvolvido por **Matheus Henrique Albert**.
+**Matheus Henrique Albert** *Estudante de Eletrônica / Desenvolvedor de Hardware*
